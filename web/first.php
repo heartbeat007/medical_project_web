@@ -60,7 +60,7 @@ Edu project
 </head>
 <body>
 
- <h1>Medical Appointment Form</h1>
+ <h1><font color="white"><b>Medical Appointment Form</b></font></h1>
 	<div class="container">
 			<div class="w3-agileits-team-title"> 
 				
