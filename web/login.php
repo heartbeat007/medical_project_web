@@ -125,7 +125,10 @@ Edu project
 <div class="container">
 <img src="bird.jpg" alt="Logo" height="200" width="200">
   </a>
-<h1><b><font color="white">Welcome To The Widget Corp Hospital</b></h1>  
+<h1><b><font color="white">Welcome To The Widget Corp Hospital</b></h1> 
+<br />
+<br />
+<br /> 
 <h1><b><font color="white">Login Form</b></h1>
 <div class="login-form">
 <div class="main-div">
