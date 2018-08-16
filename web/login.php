@@ -112,14 +112,27 @@ Edu project
 <!--//webfonts-->
 
 </head>
-
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
    <a class="navbar-brand" href="#">
     <img src="bird.jpg" alt="Logo" style="width:40px;">
   </a>
-  <button onclick="window.location.href='appoinment.php'" class="btn btn-danger navbar-btn">See The Appointment List </button>
-  ...
+  <center>
+  <button onclick="window.location.href='appoinment.php'" class="btn btn-primary navbar-btn">See The Appointment List </button>
+  &nbsp &nbsp
+
+
+  <button onclick="window.location.href='aboutus.php'" class="btn btn-info navbar-btn">About Us </button>
+  &nbsp &nbsp
+
+  <button onclick="window.location.href='aboutus.php'" class="btn btn-danger navbar-btn">Emergency Ambulance Service </button>
+  &nbsp &nbsp
+
+  <button onclick="window.location.href='aboutus.php'" class="btn btn-warning navbar-btn" >Lab Report </button>
+  &nbsp &nbsp
+  <button onclick="window.location.href='aboutus.php'" class="btn btn-default navbar-btn">Contact Us</button>
+  </center>
 </nav> 
+
 <body id="LoginForm">
 
 <div class="container">
