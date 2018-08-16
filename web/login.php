@@ -15,18 +15,41 @@
   		{
   			$name = $_POST['name'];
   			$password = $_POST['password'];
+        $catagory = $_POST['catagory'];
   				if (!empty($name && $password)) {
     			//insert the sql quary 
-    			$sub_quary = "SELECT * FROM doctor WHERE name='$name' and password='$password'";
+    			$sub_quary = "SELECT * FROM doctor WHERE name='$name' and password='$password' and area='$catagory'";
     			//we create the quary string now time to exeute
     			$sub_result = mysqli_query($conn,$sub_quary);
     			if (!empty($sub_result)) {
      		 	while($row = mysqli_fetch_array($sub_result)){
     			$namedb = $row['name'];
     			$passworddb = $row['password'];
-    				if ($name==$namedb && $password==$passworddb) {
-    					header("location:success.php");
+          $catagorydb = $row['area'];
+    				if ($name==$namedb && $password==$passworddb && $catagory=="pathology") {
+    					header("location:pathology.php");
     			}
+if ($name==$namedb && $password==$passworddb && $catagory=="psychology") {
+              header("location:psychology.php");
+          }
+
+          if ($name==$namedb && $password==$passworddb && $catagory=="neurology") {
+              header("location:neurology.php");
+          }
+
+          else if ($name==$namedb && $password==$passworddb && $catagory=="pathology") {
+              header("location:pathology.php");
+          }
+
+          else if ($name==$namedb && $password==$passworddb && $catagory=="emergency") {
+              header("location:emergency.php");
+          }
+
+          else if ($name==$namedb && $password==$passworddb && $catagory=="urology") {
+              header("location:urology.php");
+          }
+
+
     			else{
     				header("location:failed.php");	
     			}
@@ -100,6 +123,8 @@ Edu project
 <body id="LoginForm">
 
 <div class="container">
+<img src="bird.jpg" alt="Logo" height="200" width="200">
+  </a>
 <h1><b><font color="white">Login Form</b></h1>
 <div class="login-form">
 <div class="main-div">
@@ -115,11 +140,11 @@ Edu project
 								<select name ="catagory" id="category2" required="">
 									<option value="catagory" >Are you a doctor or patient??</option>
 									<option value="patient">patient</option>
-									<option value="Pathology">Pathology Doctor</option>
-									<option value="Neurology">Neurology Doctor</option>
-									<option value="Psychology">Psychology Doctor</option>
-									<option value="Emergency">Emergency Doctor</option>
-									<option value="Urology">Urology Doctor</option>
+									<option value="pathology">Pathology Doctor</option>
+									<option value="neurology">Neurology Doctor</option>
+									<option value="psychology">Psychology Doctor</option>
+									<option value="emergency">Emergency Doctor</option>
+									<option value="urology">Urology Doctor</option>
 								</select>
 								<span></span>
 							</div>
