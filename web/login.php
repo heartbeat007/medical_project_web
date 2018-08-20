@@ -26,20 +26,25 @@
     			$namedb = $row['name'];
     			$passworddb = $row['password'];
           $catagorydb = $row['area'];
-    				if ($name==$namedb && $password==$passworddb && $catagory=="pathology") {
+          //works fine
+    				if ($name==$namedb && $password==$passworddb && $catagory=="urology") {
               $_SESSION['doctorname'] = $namedb;
-    					header("location:pathology.php");
+    					header("location:urology.php");
 
     			}
-if ($name==$namedb && $password==$passworddb && $catagory=="psychology") {
+          //working ok
+          else if ($name==$namedb && $password==$passworddb && $catagory=="psychology") {
+              $_SESSION['doctorname'] = $namedb;
               header("location:psychology.php");
-          }
-
-          if ($name==$namedb && $password==$passworddb && $catagory=="neurology") {
+            }
+            //working ok
+           else if ($name==$namedb && $password==$passworddb && $catagory=="neurology") {
+              $_SESSION['doctorname'] = $namedb;
               header("location:neurology.php");
           }
-
+            //working ok
           else if ($name==$namedb && $password==$passworddb && $catagory=="pathology") {
+              $_SESSION['doctorname'] = $namedb;
               header("location:pathology.php");
           }
 
@@ -48,6 +53,7 @@ if ($name==$namedb && $password==$passworddb && $catagory=="psychology") {
           }
 
           else if ($name==$namedb && $password==$passworddb && $catagory=="urology") {
+              $_SESSION['doctorname'] = $namedb;
               header("location:urology.php");
           }
 

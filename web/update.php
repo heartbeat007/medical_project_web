@@ -103,11 +103,18 @@ library-->
 
     <div class="col-md-6 mb-3">
       <label for="validationCustom02">INSERT TIME</label>
-      <input type="text" class="form-control"  placeholder="Last name" name="time"  required>
+      <input type="text" class="form-control"  placeholder="enter time" name="time"  required>
       <div class="valid-feedback">
         Looks good!
       </div>
+      
     </div>
+    <div class="input-group input-group-lg">
+    
+      <input type="text" class="form-control"  placeholder="ENTER YOUR NAME.." name="dname"  required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
     </center>
     
   
@@ -142,9 +149,10 @@ library-->
 if (isset($_POST['submit'])) {
   $date = $_POST['date'];
   $time = $_POST['time'];
+  $dname = $_POST['dname'];
   //$email = $_POST['uemail'];
   //$date_of_birth = $_POST['udate'];
-  $upquary = "UPDATE patient SET meeting_date = '$date',meeting_time='$time' WHERE id=$update_id";
+  $upquary = "UPDATE patient SET meeting_date = '$date',meeting_time='$time',doctor='$dname' WHERE id=$update_id";
   $up_result = mysqli_query($conn,$upquary);
   if ($up_result>0) {
   	//echo "another another success";

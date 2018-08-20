@@ -47,10 +47,13 @@
                      <th>Phone</th>
                      <th>Catagory</th>
                      <th>Date</th>
+                    
                      <th>Meeting date</th>
                      <th>Meeting time</th>
                      <th>Doctor</th>
+                     
                    </thead>
+
     <tbody>
     
     <?php
@@ -71,9 +74,14 @@
   <td><?php echo $rows['phone'] ?></td>
   <td><?php echo $rows['catagory'] ?></td>
   <td><?php echo $rows['date'] ?></td>
+  <strong>
   <td><?php echo $rows['meeting_date'] ?></td>
   <td><?php echo $rows['meeting_time'] ?></td>
+  <td><?php echo $rows['doctor'] ?></td>
+  </strong>
   <!--td>
+  
+
     <a href="update.php?update=<?php //echo $rows['id'];?>" class="btn btn-primary">Update</a>
     &nbsp&nbsp
     <a href="index.php?delete=<?php// echo $rows['id'];?>" class="btn btn-danger">Delete</a>
