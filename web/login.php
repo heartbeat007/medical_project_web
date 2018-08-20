@@ -1,8 +1,8 @@
 
 <?php
 //first we have to import the database connection 
- require_once('database.php');
-
+ require_once('database.php'); 
+ session_start();
  if (isset($_POST['submit'])) 
  {
   	$catagory = $_POST['catagory'];
@@ -27,7 +27,9 @@
     			$passworddb = $row['password'];
           $catagorydb = $row['area'];
     				if ($name==$namedb && $password==$passworddb && $catagory=="pathology") {
+              $_SESSION['doctorname'] = $namedb;
     					header("location:pathology.php");
+
     			}
 if ($name==$namedb && $password==$passworddb && $catagory=="psychology") {
               header("location:psychology.php");
@@ -130,6 +132,8 @@ Edu project
   <button onclick="window.location.href='aboutus.php'" class="btn btn-warning navbar-btn" >Lab Report </button>
   &nbsp &nbsp
   <button onclick="window.location.href='aboutus.php'" class="btn btn-default navbar-btn">Contact Us</button>
+  &nbsp &nbsp
+  <button onclick="window.location.href='doctorlist.php'" class="btn btn-success navbar-btn">Avilabe doctor list</button>
   </center>
 </nav> 
 
