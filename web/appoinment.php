@@ -47,6 +47,9 @@
                      <th>Phone</th>
                      <th>Catagory</th>
                      <th>Date</th>
+                     <th>Meeting date</th>
+                     <th>Meeting time</th>
+                     <th>Doctor</th>
                    </thead>
     <tbody>
     
@@ -68,6 +71,8 @@
   <td><?php echo $rows['phone'] ?></td>
   <td><?php echo $rows['catagory'] ?></td>
   <td><?php echo $rows['date'] ?></td>
+  <td><?php echo $rows['meeting_date'] ?></td>
+  <td><?php echo $rows['meeting_time'] ?></td>
   <!--td>
     <a href="update.php?update=<?php //echo $rows['id'];?>" class="btn btn-primary">Update</a>
     &nbsp&nbsp
