@@ -5,15 +5,6 @@
 
 
 
-if (isset($_GET['update'])) {
-  $update_id = $_GET['update'];
-  
-  //$del_quary = "DELETE FROM users WHERE id='$delete_id'";
-  //$del_result = mysqli_query($conn,$del_quary);
-  //if ($del_result>0) {
-    //echo "another success";
-  //redirect('http://example.com');
-  }
 ?>
 
 
@@ -97,7 +88,7 @@ if (isset($_GET['update'])) {
     $i=0;
 
 //first we fetch all the data
-$read_quary = mysqli_query($conn,"SELECT * FROM patient");
+$read_quary = mysqli_query($conn,"SELECT * FROM patient WHERE catagory='Pathology';");
 
 //then we fetch one row at a time from the 'read_quary'
 while ($rows = mysqli_fetch_assoc($read_quary)) {
@@ -109,12 +100,12 @@ while ($rows = mysqli_fetch_assoc($read_quary)) {
 
 <tr>
   
-  <td><?php echo $i ?></td>
+  <td><?php echo $rows['id'] ?></td>
   <td><?php echo $rows['name']?></td>
   <td><?php echo $rows['email'] ?></td>
   <td><?php echo $rows['phone'] ?></td>
   <td>
-    <a href="update.php?update=<?php //echo $rows['id'];?>" class="btn btn-primary">Set time of Appoinment</a>
+    <a href="update.php?update=<?php echo $rows['id'];?>" class="btn btn-primary">Set time of Appoinment</a>
     &nbsp&nbsp
                       
   </td>
