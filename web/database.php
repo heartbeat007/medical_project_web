@@ -1,4 +1,4 @@
-<?
+<?php
 //in this script we gonna just 
 //open a database connection for the further use
 $host = 'localhost';
